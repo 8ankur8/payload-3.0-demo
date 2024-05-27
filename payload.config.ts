@@ -89,29 +89,29 @@ export default buildConfig({
     supportedLanguages: { en },
   },
 
-  admin: {
-    autoLogin: {
-      email: 'dev@payloadcms.com',
-      password: 'test',
-      prefillOnly: true,
-    },
-  },
-  async onInit(payload) {
-    const existingUsers = await payload.find({
-      collection: 'users',
-      limit: 1,
-    })
+  // admin: {
+  //   autoLogin: {
+  //     email: 'dev@payloadcms.com',
+  //     password: 'test123',
+  //     prefillOnly: true,
+  //   },
+  // },
+  // async onInit(payload) {
+  //   const existingUsers = await payload.find({
+  //     collection: 'users',
+  //     limit: 1,
+  //   })
 
-    if (existingUsers.docs.length === 0) {
-      await payload.create({
-        collection: 'users',
-        data: {
-          email: 'dev@payloadcms.com',
-          password: 'test',
-        },
-      })
-    }
-  },
+  //   if (existingUsers.docs.length === 0) {
+  //     await payload.create({
+  //       collection: 'users',
+  //       data: {
+  //         email: 'dev@payloadcms.com',
+  //         password: 'test123',
+  //       },
+  //     })
+  //   }
+  // },
   // Sharp is now an optional dependency -
   // if you want to resize images, crop, set focal point, etc.
   // make sure to install it and pass it to the config.
