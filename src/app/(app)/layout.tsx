@@ -1,5 +1,7 @@
 import React from 'react'
-import './globals.scss'
+import Footer from '@/components/Footer'
+import Header from '@/components/Header'
+import '@/app/globals.css'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({
